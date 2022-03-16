@@ -1,6 +1,6 @@
 import axios from 'axios';
 import BASE_URL_API from './API';
-import { FETCH_SUCCESS, FETCH_FAIL } from '../redux/Cases/Actions';
+import { FETCH_SUCCESS, FETCH_FAIL } from '../redux/Covid/Actions';
 
 const fetchCovidStatsFromApi = (name) => async (dispatch) => {
   let result;
