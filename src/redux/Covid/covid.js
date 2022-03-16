@@ -47,6 +47,21 @@ const covidStatsReducer = (state = initialState, action) => {
         ],
       };
 
+    case FILTER_BY_PAGE_NUMBER: {
+      const indexOfFirstElement = action.payload.pageNumber * action.payload.pageSize;
+
+      return {
+        ...state,
+        countriesPerPage: [
+          ...state.countriesPerPage,
+          ...state.filteredCountries.slice(
+            indexOfFirstElement,
+            indexOfFirstElement + action.payload.pageSize,
+          ),
+        ],
+      };
+    }
+
     default:
       return state;
   }
