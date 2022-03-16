@@ -8,3 +8,10 @@ export const getCurrentDate = () => {
 
   return currentDate;
 };
+
+export const dateToFormat = (selectedDate) => {
+  const day = selectedDate.getDate();
+  const month = selectedDate.getMonth();
+  const year = selectedDate.getFullYear();
+  return DateTime.fromObject({ year, month, day }).toISODate();
+};
