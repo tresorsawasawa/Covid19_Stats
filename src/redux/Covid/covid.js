@@ -62,6 +62,12 @@ const covidStatsReducer = (state = initialState, action) => {
       };
     }
 
+    case CLEAR_COUNTRIES_PER_PAGE:
+      return {
+        ...state,
+        countriesPerPage: action.payload,
+      };
+
     default:
       return state;
   }
