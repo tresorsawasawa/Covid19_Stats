@@ -20,3 +20,26 @@ export const clearCountriesPerPage = (payload) => ({
   type: FILTER_BY_PAGE_NUMBER,
   payload,
 });
+
+const initialState = {
+  casesByCountry: {},
+  filteredCountries: [],
+  countriesPerPage: [],
+  totalCases: {},
+};
+
+const covidStatsReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case FETCH_SUCCESS:
+      return {
+        ...state,
+        casesByCountry: action.payload.casesByCountry,
+        totalCases: action.payload.totalCases,
+      };
+
+    default:
+      return state;
+  }
+};
+
+export default covidStatsReducer;
