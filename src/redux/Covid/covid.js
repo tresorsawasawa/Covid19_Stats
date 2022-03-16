@@ -68,6 +68,9 @@ const covidStatsReducer = (state = initialState, action) => {
         countriesPerPage: action.payload,
       };
 
+    case FETCH_FAIL:
+      return initialState;
+
     default:
       return state;
   }
