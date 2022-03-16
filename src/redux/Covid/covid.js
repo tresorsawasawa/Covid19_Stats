@@ -1,0 +1,22 @@
+import {
+  FETCH_SUCCESS,
+  FILTER_BY_COUNTRY_NAME,
+  FILTER_BY_PAGE_NUMBER,
+  CLEAR_COUNTRIES_PER_PAGE,
+  FETCH_FAIL,
+} from './Actions';
+
+export const filterCountriesByName = (payload) => ({
+  type: FILTER_BY_COUNTRY_NAME,
+  payload,
+});
+
+export const filterCountriesByPageNumber = (payload) => ({
+  type: CLEAR_COUNTRIES_PER_PAGE,
+  payload,
+});
+
+export const clearCountriesPerPage = (payload) => ({
+  type: FILTER_BY_PAGE_NUMBER,
+  payload,
+});
